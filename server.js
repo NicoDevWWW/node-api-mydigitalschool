@@ -1,9 +1,16 @@
 
-const http = require('http');
+const express = require('express')
+const Logger = require('./tools/logger')
+const app = express()
+const port = 3000
+var router = express.Router()
 
-const server = http.createServer((req, res) => {
-	console.log(req);
-    res.end('Voilà la réponse du serveur !');
-});
+app.use(Logger)
 
-server.listen(process.env.PORT || 3000);
+app.use(router)
+
+app.use('/', require('./routes'))
+
+app.listen(port, () => {
+	console.log(`Example app listening at http://localhost:${port}`)
+})
