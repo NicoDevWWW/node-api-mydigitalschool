@@ -4,7 +4,7 @@
   "description": "Ma premiere api + My digital school",
   "main": "server.js",
   "scripts": {
-	"start": "nodemon server.js",
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -13,6 +13,9 @@
   "author": "Nicolas SQUEREN",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.14"
   }
 }
